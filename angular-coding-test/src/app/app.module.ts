@@ -5,16 +5,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <== add th
 
 
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TrackComponent } from './track/track.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TrackComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
