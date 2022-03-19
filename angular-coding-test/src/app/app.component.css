@@ -1,0 +1,24 @@
+thead th {
+    border-bottom: 1px solid black;
+    text-align: center; 
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+td {
+    text-align: center;
+}
+
+.tracking-number, .table {
+    display:flex;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}

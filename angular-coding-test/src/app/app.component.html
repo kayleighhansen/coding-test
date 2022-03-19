@@ -1,0 +1,48 @@
+
+<p class="title">Tracking App</p>
+<div class="form-container">
+  <form (ngSubmit)="getParts(f)" #f="ngForm">
+    <div>
+
+      <input type="text" name="get" id="get" name="get" [ngModel]="tracking" #get="ngModel"required>
+
+      <button type="button" (click)="getParts(f)">Track</button>
+
+    </div>
+  </form>
+</div>
+
+
+<div *ngIf="showMe">
+
+  <div class="tracking-number">
+    <h2>
+      205-49243806
+    </h2>
+  </div>
+
+  <div class="table">
+    <table>
+      <thead class="header">
+        <th>Part</th>
+        <th>Part Origin</th>
+        <th>Part Destination</th>
+        <th>Part Weight Kilos</th>
+        <th>Estimated Arrival Date</th>
+        <th>Arrival Date</th>
+      </thead>
+      <tr *ngFor="let part of parts; let i = index" >
+        <td>{{ part.part }}</td>
+        <td>{{ part.partOrigin }}</td>
+        <td>{{ part.partDestination }}</td>
+        <td>{{ part.partWeightKilos }}</td>
+        <td>{{ part.EstimatedArrivedDateTime }}</td>
+        <td>{{ part.DeliveredDateTime }}</td>
+      </tr>
+    </table>
+  </div>
+  
+
+</div>
+
+
